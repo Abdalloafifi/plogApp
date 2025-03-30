@@ -1,0 +1,248 @@
+/* حاوية التعليقات */
+.comment-list {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+    text-align: center; /* توسيط المحتوى */
+}
+
+/* عدد التعليقات */
+.comment-list-count {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* نموذج إضافة تعليق رئيسي */
+.comment-form {
+    display: flex;
+    flex-direction: column; /* ترتيب رأسي */
+    align-items: center; /* توسيط العناصر */
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* تصغير حجم الإدخال العام إلى 80% وتوسيطه */
+.comment-input {
+    width: 80%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* زر إرسال التعليق */
+.comment-submit {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.comment-submit:hover {
+    background-color: var(--pumpkin-color);
+}
+
+/* كل تعليق */
+.comment-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left; /* إعادة النص إلى اليسار */
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+/* محتوى التعليق */
+.comment {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* تصغير الصورة */
+.comment-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* نصوص التعليق */
+.comment-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+/* اسم المستخدم */
+.comment-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+/* تاريخ التعليق */
+.comment-date {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0.25rem 0;
+}
+
+/* نص التعليق */
+.comment-comment {
+    font-size: 1rem;
+    color: #444;
+    margin: 0.5rem 0;
+}
+
+/* أزرار الإجراءات */
+.comment-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+/* زر الإعجاب والرد */
+.reply-button,
+.like-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+.reply-button:hover,
+.like-button:hover {
+    color: var(--pumpkin-color);
+}
+
+/* زر تبديل التعليقات المتداخلة */
+.toggle-nested-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    transition: color 0.3s;
+    padding: 0.2rem 0;
+}
+
+.toggle-nested-button:hover {
+    color: var(--pumpkin-color);
+}
+
+/* نموذج الرد */
+.reply-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* توسيط الإدخال */
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* تصغير حجم إدخال الرد إلى 60% */
+.reply-input {
+    width: 60%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* زر إرسال الرد */
+.reply-submit {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.reply-submit:hover {
+    background-color: var(--pumpkin-color);
+}
+
+/* التعليقات المتداخلة */
+.nested-comments {
+    margin-top: 1rem;
+    border-left: 2px dashed #ddd;
+}
+
+/* استجابة الشاشات الصغيرة */
+@media (max-width: 600px) {
+    .comment-list {
+        padding: 0.5rem;
+    }
+
+    .comment-list-count {
+        font-size: 1.3rem;
+    }
+
+    .comment-img {
+        width: 35px; /* تصغير الصورة */
+        height: 35px;
+    }
+
+    .comment-name {
+        font-size: 0.9rem; /* تصغير اسم المستخدم */
+    }
+
+    .comment-date {
+        font-size: 0.75rem; /* تصغير حجم التاريخ */
+    }
+
+    .comment-comment {
+        font-size: 0.85rem; /* تصغير حجم التعليق */
+    }
+
+    .comment-actions {
+        gap: 0.5rem; /* تقليل المسافة بين الأزرار */
+    }
+
+    .reply-button,
+    .like-button,
+    .toggle-nested-button {
+        font-size: 0.8rem; /* تصغير حجم الأزرار */
+    }
+}
+
+تأثير عند التحويم والتركيز
+.comment-input:hover,
+.reply-input:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.comment-input:focus,
+.reply-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
+    outline: none;
+}

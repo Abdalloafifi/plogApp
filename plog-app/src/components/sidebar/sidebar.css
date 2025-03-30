@@ -1,0 +1,77 @@
+/* الأساسيات */
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: -200px; 
+    width: 180px;
+    height: 100vh;
+    background: white;
+    transition: all 0.3s;
+    box-shadow: 20px 0 15px rgba(0, 0, 0, 0.2);
+    background-color: rgb(238, 238, 238);
+
+}
+ul li {
+    list-style: none;
+}
+
+.sidebar--open {
+    left: 0;
+}
+
+/* زر التبديل - للجوال فقط */
+.sidebar-toggle {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--primary-color);
+    z-index: 1100;
+    display: none; /* مخفي افتراضيًا */
+}
+
+/* محتوى الـ Sidebar */
+.sidebar-links {
+    padding: 20px;
+    margin-top: 60px;
+    overflow-y: auto;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 1180px) {
+    .sidebar{
+        width: 140px;
+    }
+}
+/* التعديلات للشاشات الصغيرة */
+@media (max-width: 999px) {
+    .sidebar {
+        width: 120px;
+    }
+    .sidebar-toggle {
+        display: block;
+    }
+    
+    .sidebar--open {
+        left: 0;
+        box-shadow: 20px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+}
+
+/* التعديلات للشاشات الكبيرة */
+@media (min-width: 1000px) {
+    .sidebar {
+        left: 0;
+    }
+    
+    .sidebar--open {
+        left: 0 !important;
+    }
+    
+    .sidebar-links {
+        margin-top: 0;
+    }
+}

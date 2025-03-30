@@ -1,0 +1,46 @@
+.home-hero-header{
+    background: url(../../images/home-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.home-hero-header-loyout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+}
+
+.home-hero-header-loyout h1{
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.home-hero-header-loyout h2{
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.home-latest-post{
+    margin-left: 30px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    width: max-content;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+
+}
+
+.home-controller{
+    padding: 0 30px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+}

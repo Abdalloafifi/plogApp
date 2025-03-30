@@ -1,0 +1,28 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    gap: 10px;
+    font-size: 14px;
+    color: #646262;
+}
+.page-previous{
+    cursor: pointer;
+}
+.page-previous:hover{
+    color: #000;
+}
+.page-next{
+    cursor: pointer;
+}
+.page-next:hover{
+    color: #000;
+}
+.page-number{
+    cursor: pointer;
+}
+.page-number:hover{
+    color: #000;
+}
+

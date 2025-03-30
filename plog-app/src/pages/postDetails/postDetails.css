@@ -1,0 +1,252 @@
+/* ======== الإعدادات العامة (لأجهزة الكمبيوتر) ======== */
+
+/* الحاوية الرئيسية لكل منشور */
+.blog-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.bie-three-dots {
+    font-size: 24px;
+    position: absolute;
+    /* top: 10px; */
+    right: 20px;
+    cursor: pointer;
+
+}
+
+/* غلاف صورة المنشور */
+.blog-card__img-wrapper {
+    width: 80%;
+    border-radius: 30px;
+    margin: 10px auto;
+    /* نسبة العرض إلى الارتفاع 4/3 تجعل الصورة أعلى مقارنةً بنسبة 16/9 */
+    /* aspect-ratio: 4 / 3; */
+    overflow: hidden;
+}
+
+/* تنسيق الصورة داخل المنشور */
+.blog-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* غلاف معلومات المنشور (مثل العنوان والتفاصيل) */
+.blog-card__info-wrapper {
+    position: relative;
+    padding: 20px;
+}
+
+/* تنسيق معلومات المنشور */
+.blog-card__info {
+    margin-bottom: 15px;
+}
+
+/* تنسيق اسم المؤلف */
+.blog-card__author {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+/* تنسيق تاريخ النشر */
+.blog-card__date {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+/* تنسيق تفاصيل المنشور */
+.blog-card__details {
+    margin-bottom: 20px;
+}
+
+/* تنسيق عنوان المنشور */
+.blog-card__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    /* عرض سطر واحد مع اقتصاص النص الزائد */
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ;  */
+}
+
+/* تنسيق وصف المنشور */
+.blog-card__description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* تنسيق رابط الفئة */
+.blog-card__category {
+    padding: 2px 8px;
+    background-color: rgb(215, 215, 215);
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: 2px solid #999;
+    border-radius: 10px;
+}
+
+/* تنسيق رابط الفئة عند التحويم */
+.blog-card__category:hover {
+    text-decoration: underline;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* تنسيق أزرار المشاركة والتعليقات والإعجاب */
+.blog-card__more {
+    /* margin: 5px 20px 0; */
+    font-size: 16px;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:nowrap ;
+}
+
+.blog-card__share,
+.blog-card__comments,
+.blog-card__like {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.blog-card__share:hover,
+.blog-card__comments:hover,
+.blog-card__like:hover {
+    cursor: pointer;
+    color: #333;
+}
+
+/* تنسيق قسم التعليقات */
+.blog-card__comment-form {
+    margin: 30px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* عدم التفاف العناصر على سطح المكتب */
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+/* تنسيق حقل إدخال التعليق */
+.blog-card__comment-input {
+    flex: 1;
+    font-size: 16px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 80%;
+}
+
+/* تنسيق placeholder لحقل التعليق */
+.blog-card__comment-input::placeholder {
+    color: #999;
+}
+
+.blog-card__comment-input:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* تنسيق زر إرسال التعليق */
+.blog-card__comment-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 20%;
+}
+
+.btn-three-dots {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    gap: 20px;
+}
+
+.btn-three-dots button {
+    background-color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+}
+
+.update-post-form-submit {
+    background-color: #f30a0a !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.btn-three-dots button:hover {
+    background-color: #131111 !important;
+    transform: scale(1.05);
+}
+
+/* ======== تحسينات للهواتف (max-width: 600px) ======== */
+@media (max-width: 600px) {
+    .blog-card__title {
+        font-size: 20px;
+    }
+
+    .blog-card__description {
+        font-size: 14px;
+    }
+
+    .blog-card__author,
+    .blog-card__date {
+        font-size: 12px;
+    }
+
+    .blog-card__category {
+        top: 10px;
+        right: 10px;
+        font-size: 12px;
+        padding: 2px 6px;
+    }
+
+    .blog-card__comment-input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .blog-card__comment-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}

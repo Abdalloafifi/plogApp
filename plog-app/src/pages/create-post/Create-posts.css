@@ -1,0 +1,80 @@
+.section-create-post {
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px auto;
+    gap: 30px;
+    height: 600px;
+    width: 80%;
+    background-color: #595656;
+    border-radius: 150px 0;
+}
+
+/* تنسيق العنوان */
+.section-create-post h2 {
+    color: #fff;
+    text-align: center;
+}
+
+/* تنسيق النموذج داخل القسم */
+.section-create-post form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    /* لتحديد أقصى عرض للنموذج */
+}
+
+/* تنسيق المدخلات */
+.create-post-input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    width: 100%;
+}
+
+.create-post-input::placeholder {
+    color: #fff;
+}
+
+.create-post-input:focus {
+    background-color: #fff;
+    color: #333;
+}
+
+/* تنسيق زر الإرسال */
+.create-post-submit {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-post-submit:hover {
+    background-color: blue;
+}
+
+/* استجابة الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .section-create-post {
+        width: 90%;
+        height: auto;
+        /* السماح بتغيير الارتفاع بناءً على المحتوى */
+        padding: 20px;
+        margin: 30px auto;
+        border-radius: 50px 0;
+        /* تقليل الانحناء */
+    }
+}
