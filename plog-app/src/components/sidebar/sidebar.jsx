@@ -13,8 +13,8 @@ const Sidebar = () => {
     // تحديد حجم الشاشة
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-            if (window.innerWidth > 768) setIsOpen(true);
+            setIsMobile(window.innerWidth <= 850);
+            if (window.innerWidth > 850) setIsOpen(true);
         };
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
